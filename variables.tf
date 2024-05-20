@@ -1,13 +1,13 @@
 variable "admin_privileges" {
   description = "Whether the group has admin privileges"
   type        = bool
-  default   = false
+  default     = false
 }
 
 variable "auto_join" {
   description = "Whether new users are automatically added to the group"
   type        = bool
-  default = true
+  default     = true
 }
 
 variable "external_id" {
