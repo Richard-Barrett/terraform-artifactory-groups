@@ -3,7 +3,7 @@ terraform {
   required_providers {
     artifactory = {
       source  = "jfrog/artifactory"
-      version = "10.7.6"
+      version = "10.7.7"
     }
   }
 }
@@ -28,12 +28,12 @@ resource "artifactory_permission_target" "my_permission_target" {
   repo {
     actions {
       groups {
-        name = upper(artifactory_group.this.name)
-        permissions = var.permissions         // DEFAULT: ["read", "write"]
+        name        = upper(artifactory_group.this.name)
+        permissions = var.permissions // DEFAULT: ["read", "write"]
       }
     }
     excludes_pattern = [""]
     includes_pattern = ["**"]
-    repositories     = var.repositories       // DEFAULT: ["ANY"]
+    repositories     = var.repositories // DEFAULT: ["ANY"]
   }
 }
