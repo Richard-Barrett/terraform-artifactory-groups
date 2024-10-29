@@ -2,6 +2,11 @@
 
 # terraform-artifactory-groups
 
+[![CodeQL IaC](https://github.com/Richard-Barrett/terraform-artifactory-groups/actions/workflows/iac-codeql.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-artifactory-groups/actions/workflows/iac-codeql.yaml)
+[![Terraform Validate](https://github.com/Richard-Barrett/terraform-artifactory-groups/actions/workflows/terraform_validate.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-artifactory-groups/actions/workflows/terraform_validate.yaml)
+[![TFLint](https://github.com/Richard-Barrett/terraform-artifactory-groups/actions/workflows/tflint.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-artifactory-groups/actions/workflows/tflint.yaml)
+[![Trivy Scan](https://github.com/Richard-Barrett/terraform-artifactory-groups/actions/workflows/trivy.yaml/badge.svg)](https://github.com/Richard-Barrett/terraform-artifactory-groups/actions/workflows/trivy.yaml)
+
 Terraform Module for Making Artifactory Groups and Permission Targets for JFrog Artifactory
 
 This Terraform module manages resources in JFrog Artifactory, specifically groups and permission targets.
@@ -67,7 +72,7 @@ Here's a basic usage example of your Terraform module. This example assumes that
 
 ```hcl
 module "artifactory" {
-  source = "./artifactory_module"
+  source = "git::https://github.com/Richard-Barrett/terraform-artifactory-groups.git?ref=0.8.0"
 
   name             = "MY_GROUP"
   description      = "This is my group"
@@ -92,7 +97,7 @@ Here's an advanced usage example of your Terraform module. This example assumes 
 
 ```hcl
 module "artifactory" {
-  source = "./artifactory_module"
+  source = "git::https://github.com/Richard-Barrett/terraform-artifactory-groups.git?ref=0.8.0"
 
   name             = "MY_GROUP"
   description      = "This is my group"
