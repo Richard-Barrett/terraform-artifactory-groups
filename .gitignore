@@ -8,6 +8,12 @@ __pycache__/
 # Local .terraform directories
 **/.terraform/*
 
+# Idea Directories
+.idea/
+
+# Terraform lock file
+ .terraform.lock.hcl
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
